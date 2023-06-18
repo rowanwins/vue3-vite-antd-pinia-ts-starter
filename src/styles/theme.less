@@ -1,0 +1,123 @@
+@import 'variables.less';
+@import 'classes.less';
+
+h2 {
+  font-weight: 300;
+  font-size: @fontSizingSet[xl];
+  margin-bottom: @sizingSet[lg];
+}
+
+h2, h3 {
+  color: @grey-900;
+}
+
+// Table Overrides
+.ant-table-thead > tr > th, .ant-table-small .ant-table-thead > tr > th {
+  background-color: transparent;
+  border-bottom: 1px solid @grey-900;
+}
+
+.ant-table, .ant-table-small {
+  background: transparent;
+}
+
+.ant-table table {
+  border-collapse: unset;
+  border: 1px solid @grey-900;
+  border-radius: 4px;
+}
+
+.ant-table-thead > tr {
+  border-bottom: 1px solid @grey-900;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid fade(@grey-900, 20);
+}
+
+.ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+  background: fade(@grey-600, 5);
+}
+
+.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  width: 0px;
+}
+
+.ant-form-vertical {
+  .ant-form-item-label {
+    padding-bottom: @padding-2;
+    label {
+      font-size: @fontSizingSet[mid];
+      color: @grey-900;
+      margin-bottom: @padding-2;
+      font-weight: 400;
+    }
+  }
+}
+
+.ant-table-filter-trigger {
+  margin: 0px;
+}
+
+// Icon within button overrides
+.ant-btn > .anticon + span, .ant-btn > span + .anticon {
+  vertical-align: middle;
+  line-height: 0;
+}
+
+// Divider overrides
+.ant-divider-horizontal.ant-divider-with-text::before, .ant-divider-horizontal.ant-divider-with-text::after {
+  border-top-width: 2px;
+  color: @grey-800;
+}
+
+.ant-divider {
+  border-top-width: 2px;
+}
+
+// Popover overrides
+.ant-popover-inner {
+  width: 250px;
+}
+
+
+// Modal overrides
+.ant-modal-header {
+  background: @grey-900;
+  .ant-modal-title {
+    color: white;
+  }
+}
+
+.ant-modal-close-icon {
+  color: white;
+}
+
+.ant-modal-content {
+  background-color: @grey-600;
+}
+
+.ant-modal-mask {
+  background-color: fade(@grey-600, 65%);
+}
+
+
+ // Tooltip Overrides
+.ant-tooltip-inner {
+  background-color: rgba(0, 0, 0, 0.80);
+}
+
+
+// Tag Overrides
+.ant-tag {
+  padding: @sizingSet[sm] @sizingSet[mid];
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: @grey-600;
+}
+
+// Alert Overrides
+.ant-alert-error {
+  border-color: fade(@danger, 30%);
+}

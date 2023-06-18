@@ -1,0 +1,95 @@
+@import 'variables.less';
+
+.orangeWarningText {
+  color: @orange;
+}
+
+.alignTextRight {
+  text-align: right;
+}
+
+.centred {
+  text-align: center;
+}
+
+
+.btnsFloatedRight {
+  text-align: right;
+  .ant-btn {
+      margin-left: @sizingSet[std];
+  }
+}
+
+.secondaryBtn {
+  background-color: @orange!important;
+  color: white!important;
+  border: none!important;
+}
+
+.card {
+  border: 1px solid fade(@grey-900, 40);
+  border-radius: 4px;
+  padding: @sizingSet[std-lg];
+  p {
+    margin-bottom: 0px;
+    line-height: normal;
+  }
+  h3 {
+    margin-bottom: 0px;
+  }
+
+  .ant-divider-horizontal {
+    margin: @sizingSet[std] 0px;
+  }
+}
+
+.verticalCheckboxGroup{
+  display: block!important;
+  .ant-checkbox-wrapper {
+    display: flex!important;
+  }
+}
+
+// Creates a set of generic classes like
+// .marginTop-std {
+//   margin-top: 12px;
+// }
+// See the @sizingSet in variables.less
+each(@sizingSet, {
+  .marginTop-@{key} {
+    margin-top: @value;
+  }
+  .marginBottom-@{key} {
+    margin-bottom: @value;
+  }
+  .marginLeft-@{key} {
+    margin-left: @value;
+  }
+  .marginRight-@{key} {
+    margin-right: @value;
+  }
+
+  .paddingTop-@{key} {
+    padding-top: @value;
+  }
+  .paddingBottom-@{key} {
+    padding-bottom: @value;
+  }
+  .paddingLeft-@{key} {
+    padding-left: @value;
+  }
+  .paddingRight-@{key} {
+    padding-right: @value;
+  }
+})
+
+// Creates a set of generic classes like
+// .fontSizing-mid {
+//   font-size: 0.9rem;
+// }
+// See the @fontSizingSet in variables.less
+each(@fontSizingSet, {
+  .fontSizing-@{key} {
+    font-size: @value;
+  }
+})
